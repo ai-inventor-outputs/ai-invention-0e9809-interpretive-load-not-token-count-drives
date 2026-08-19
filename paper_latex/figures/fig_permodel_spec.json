@@ -1,0 +1,23 @@
+{
+  "note": "Rendered via custom script fig_permodel_gen.py (house style: apply_house_style, place_point_label, fit_point_labels, assert_text_is_legible) because the catalogue 'forest' renderer draws all rows in one color and this figure requires per-row significance coloring.",
+  "type": "forest",
+  "title": "Medium-Tier CV Gap by Model",
+  "xlabel": "Mean CV delta at medium tier (relevant - filler)",
+  "xlim": [-0.3, 1.0],
+  "null_line": 0.0,
+  "aspect": "4:3",
+  "categories": ["gpt-4o-mini", "gpt-4.1-nano", "gpt-4.1-mini"],
+  "series": [
+    {
+      "values": [0.383, 0.202, 0.290],
+      "ci_lower": [0.100, -0.002, -0.074],
+      "ci_upper": [0.744, 0.430, 0.840]
+    }
+  ],
+  "row_colors": {
+    "gpt-4o-mini": "#1f4e8c (dark blue, CI excludes zero)",
+    "gpt-4.1-nano": "#888888 (gray, CI includes zero)",
+    "gpt-4.1-mini": "#888888 (gray, CI includes zero)"
+  },
+  "caption": "Per-model paired bootstrap estimates of the medium-tier elaboration-minus-filler CV gap. The positive direction holds across all three same-provider models, though only gpt-4o-mini's confidence interval individually excludes zero."
+}

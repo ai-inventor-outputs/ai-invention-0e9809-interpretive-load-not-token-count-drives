@@ -1,0 +1,14 @@
+{
+  "figure_id": "fig_cv_bars",
+  "title": "Elaboration vs Filler CV Gap by Tier",
+  "caption": "Paired, seed-clustered bootstrap 95% confidence intervals for the mean CV gap (relevant elaboration minus token-matched filler) at each length tier and pooled across tiers. Only the medium tier and the pooled estimate exclude zero.",
+  "xlabel": "Mean CV delta (relevant elaboration − filler)",
+  "xlim": [-0.1, 0.7],
+  "null_line": 0.0,
+  "rows": [
+    {"label": "Pooled (all tiers)", "point": 0.195, "ci_low": 0.091, "ci_high": 0.319, "excludes_zero": true},
+    {"label": "Medium tier",        "point": 0.350, "ci_low": 0.098, "ci_high": 0.666, "excludes_zero": true},
+    {"label": "Long tier",          "point": 0.112, "ci_low": -0.0005, "ci_high": 0.219, "excludes_zero": false},
+    {"label": "Short tier",         "point": 0.123, "ci_low": -0.001, "ci_high": 0.254, "excludes_zero": false}
+  ]
+}

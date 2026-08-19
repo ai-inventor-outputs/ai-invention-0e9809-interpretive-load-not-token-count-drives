@@ -1,0 +1,109 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cabrera and Saxton-Knight(2026)]{Cabrera2026}
+Luc'ia~M. Cabrera and Isaac Saxton-Knight.
+\newblock Too long; didn't solve.
+\newblock In \emph{Proceedings of the Workshop on Evaluating Evaluations
+  (EvalEval)}, volume abs/2604.07593, 2026.
+\newblock \doi{10.48550/arXiv.2604.07593}.
+
+\bibitem[Cobbe et~al.(2021)Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser,
+  Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman]{Cobbe2021}
+K.~Cobbe, Vineet Kosaraju, Mo~Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser,
+  Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher
+  Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems.
+\newblock \emph{ArXiv}, abs/2110.14168, 2021.
+
+\bibitem[Du et~al.(2025)Du, Tian, Ronanki, Rongali, Bodapati, Galstyan, Wells,
+  Schwartz, Huerta, and Peng]{Du2025}
+Yufeng Du, Minyang Tian, S.~Ronanki, Subendhu Rongali, S.~Bodapati, A.G.
+  Galstyan, Azton Wells, Roy Schwartz, E.~Huerta, and Hao Peng.
+\newblock Context length alone hurts llm performance despite perfect retrieval.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/2510.05381, 2025.
+\newblock \doi{10.48550/arXiv.2510.05381}.
+
+\bibitem[Liu et~al.(2023)Liu, Lin, Hewitt, Paranjape, Bevilacqua, Petroni, and
+  Liang]{Liu2023}
+Nelson~F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua,
+  F.~Petroni, and Percy Liang.
+\newblock Lost in the middle: How language models use long contexts.
+\newblock In \emph{Transactions of the Association for Computational
+  Linguistics}, volume~12, pages 157--173, 2023.
+\newblock \doi{10.1162/tacl_a_00638}.
+
+\bibitem[Mizrahi et~al.(2023)Mizrahi, Kaplan, Malkin, Dror, Shahaf, and
+  Stanovsky]{Mizrahi2023}
+Moran Mizrahi, Guy Kaplan, D.~Malkin, Rotem Dror, Dafna Shahaf, and Gabriel
+  Stanovsky.
+\newblock State of what art? a call for multi-prompt llm evaluation.
+\newblock In \emph{Transactions of the Association for Computational
+  Linguistics}, volume~12, pages 933--949, 2023.
+\newblock \doi{10.1162/tacl_a_00681}.
+
+\bibitem[Sclar et~al.(2023)Sclar, Choi, Tsvetkov, and Suhr]{Sclar2023}
+Melanie Sclar, Yejin Choi, Yulia Tsvetkov, and Alane Suhr.
+\newblock Quantifying language models' sensitivity to spurious features in
+  prompt design or: How i learned to start worrying about prompt formatting.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2310.11324, 2023.
+\newblock \doi{10.48550/arXiv.2310.11324}.
+
+\bibitem[Shi et~al.(2023)Shi, Chen, Misra, Scales, Dohan, Chi, Scharli, and
+  Zhou]{Shi2023}
+Freda Shi, Xinyun Chen, Kanishka Misra, Nathan Scales, David Dohan, Ed~H. Chi,
+  Nathanael Scharli, and Denny Zhou.
+\newblock Large language models can be easily distracted by irrelevant context.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  31210--31227, 2023.
+\newblock \doi{10.48550/arXiv.2302.00093}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{Vaswani2017}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and I.~Polosukhin.
+\newblock Attention is all you need.
+\newblock In \emph{Neural Information Processing Systems}, pages 5998--6008,
+  2017.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Le, Chi, and Zhou]{Wang2022}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~H. Chi, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2203.11171, 2022.
+
+\bibitem[Xu et~al.(2026)Xu, Li, Xiao, Teng, Zhang, Chen, and Li]{Xu2026}
+Zhanchao Xu, Haoyang Li, Q.~Xiao, Fei Teng, Chen~Jason Zhang, Lei Chen, and
+  Qing Li.
+\newblock From rigid to dynamic: Entropy-guided adaptive inference for
+  long-context llms.
+\newblock \emph{ArXiv}, abs/2606.09508, 2026.
+\newblock \doi{10.48550/arXiv.2606.09508}.
+
+\bibitem[Yang et~al.(2025)Yang, Huang, Zhang, Surdeanu, Wang, and
+  Pan]{Yang2025}
+Minglai Yang, Ethan Huang, Liang Zhang, Mihai Surdeanu, W.~Wang, and Liangming
+  Pan.
+\newblock How is llm reasoning distracted by irrelevant context? an analysis
+  using a controlled benchmark.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 13329--13347, 2025.
+\newblock \doi{10.48550/arXiv.2505.18761}.
+
+\bibitem[Yuan et~al.(2025)Yuan, Li, Ding, Xie, Li, Zhao, Wan, Shi, Hu, and
+  Liu]{Yuan2025}
+Jiayi Yuan, Hao Li, Xinheng Ding, Wenya Xie, Yu-Jhe Li, Wentian Zhao, Kun Wan,
+  Jing Shi, Xia Hu, and Zirui Liu.
+\newblock Understanding and mitigating numerical sources of nondeterminism in
+  llm inference.
+\newblock In \emph{Neural Information Processing Systems}, 2025.
+\newblock \doi{10.52202/085713-5653}.
+
+\end{thebibliography}

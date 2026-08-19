@@ -1,0 +1,24 @@
+{
+  "figure_id": "fig_entropy_bars",
+  "title": "Logprob Entropy by Content Type and Length",
+  "caption": "Mean logprob-entropy proxy (first-20-token entropy, nats) across the seven content-type by length-tier conditions, pooled over 16 seeds and 3 models. Entropy stays nearly flat across filler tiers but rises monotonically with relevant-elaboration length.",
+  "xlabel": "Content type and length tier",
+  "ylabel": "Mean entropy, first 20 tokens (nats)",
+  "ylim": [0, 0.6],
+  "categories": [
+    "Bare control",
+    "Filler short",
+    "Filler medium",
+    "Filler long",
+    "Relevant short",
+    "Relevant medium",
+    "Relevant long"
+  ],
+  "values": [0.334, 0.339, 0.335, 0.341, 0.434, 0.479, 0.514],
+  "group": ["Filler", "Filler", "Filler", "Filler", "Relevant", "Relevant", "Relevant"],
+  "baseline": 0.334,
+  "baseline_label": "bare-control baseline",
+  "n_seeds": 16,
+  "n_models": 3,
+  "colors": {"Filler": "#DE8F05", "Relevant": "#029E73"}
+}

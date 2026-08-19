@@ -1,0 +1,37 @@
+{
+  "type": "panel",
+  "panel_labels": true,
+  "title": "Restatement vs Scaffolding Decomposition",
+  "aspect": "16:9",
+  "ncols": 2,
+  "panels": [
+    {
+      "type": "bar",
+      "title": "Answer variability",
+      "ylabel": "Mean answer CV",
+      "ylim": [0, 0.3],
+      "annotate": true,
+      "categories": ["CV"],
+      "series": [
+        {"label": "Bare control", "values": [0.195]},
+        {"label": "Filler (medium)", "values": [0.158]},
+        {"label": "Paraphrase only", "values": [0.261]},
+        {"label": "Paraphrase + scaffolding", "values": [0.160]}
+      ]
+    },
+    {
+      "type": "bar",
+      "title": "Task accuracy",
+      "ylabel": "Fraction correct",
+      "ylim": [0, 1.0],
+      "annotate": true,
+      "categories": ["Accuracy"],
+      "series": [
+        {"label": "Bare control", "values": [0.819]},
+        {"label": "Filler (medium)", "values": [0.900]},
+        {"label": "Paraphrase only", "values": [0.854]},
+        {"label": "Paraphrase + scaffolding", "values": [0.605]}
+      ]
+    }
+  ]
+}
