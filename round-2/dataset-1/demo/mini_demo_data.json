@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "source": "openai/gsm8k (config=main, split=test)",
+    "description": "Decomposition of the prior 'relevant elaboration' condition into paraphrase_only and paraphrase_scaffolding sub-conditions, length-matched to the prior medium tier (~250 added cl100k_base tokens beyond the bare question), for 8 GSM8K test-split seed problems.",
+    "medium_tier_target_added_tokens": 250,
+    "tolerance": "max(15 tokens, 10% of target)",
+    "scaffolding_text": "Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+    "approximation_note": "Seed problems are a fixed, hand-selected set of 8 GSM8K test-split indices chosen for diversity of reasoning-hop count (2-4), arithmetic-operation mix, and answer magnitude (8-200). The upstream artifacts (art_EQ9EJso6WFvP / art_tqod35nIRuWp) that used a prior 'bare/filler/elaboration' seed set were not available to this executor as a dependency, so exact seed-index-for-seed-index reproduction of that prior set could not be verified. This is a best-effort, clearly logged approximation, not a guaranteed exact match -- downstream experiment authors should treat cross-condition comparability to the original bare/filler/elaboration conditions as best-effort rather than guaranteed.",
+    "seed_indices": [
+      0,
+      1,
+      7,
+      15,
+      23,
+      41,
+      58,
+      77
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "openai/gsm8k",
+      "examples": [
+        {
+          "input": "Each day Janet's ducks produce 16 eggs. Every morning she eats three of them for breakfast, and she uses four more to bake muffins for her friends. Whatever eggs are left over, she takes to the farmers' market and sells at a price of $2 per egg. Working out her daily earnings, how many dollars does she collect at the farmers' market each day? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "18",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_0",
+          "metadata_tier": "medium",
+          "metadata_token_count": 303,
+          "metadata_added_token_count": 239,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "18"
+        },
+        {
+          "input": "Each day Janet's ducks produce 16 eggs. Every morning she eats three of them for breakfast, and she uses four more to bake muffins for her friends. Whatever eggs are left over, she takes to the farmers' market and sells at a price of $2 per egg. Working out her daily earnings, how many dollars does she collect at the farmers' market each day? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "18",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_0",
+          "metadata_tier": "medium",
+          "metadata_token_count": 336,
+          "metadata_added_token_count": 272,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "18"
+        },
+        {
+          "input": "Making a robe requires 2 bolts of blue fabric, plus an amount of white fabric equal to half of that. What is the combined number of bolts needed in total? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "3",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_1",
+          "metadata_tier": "medium",
+          "metadata_token_count": 260,
+          "metadata_added_token_count": 234,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "3"
+        },
+        {
+          "input": "Making a robe requires 2 bolts of blue fabric, plus an amount of white fabric equal to half of that. What is the combined number of bolts needed in total? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "3",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_1",
+          "metadata_tier": "medium",
+          "metadata_token_count": 293,
+          "metadata_added_token_count": 267,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "3"
+        },
+        {
+          "input": "Carla needs to download a file that is 200 GB in size. Under normal conditions her download speed is 2 GB per minute, but once the download reaches 40% completion, Windows forces a restart to install updates, a process that consumes 20 minutes. After that restart, the download must begin again from the very start. Counting all of this, how many minutes does it take her to finish downloading the file? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above.",
+          "output": "160",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_7",
+          "metadata_tier": "medium",
+          "metadata_token_count": 302,
+          "metadata_added_token_count": 236,
+          "metadata_n_hops": 4,
+          "metadata_gold_answer": "160"
+        },
+        {
+          "input": "Carla needs to download a file that is 200 GB in size. Under normal conditions her download speed is 2 GB per minute, but once the download reaches 40% completion, Windows forces a restart to install updates, a process that consumes 20 minutes. After that restart, the download must begin again from the very start. Counting all of this, how many minutes does it take her to finish downloading the file? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "160",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_7",
+          "metadata_tier": "medium",
+          "metadata_token_count": 335,
+          "metadata_added_token_count": 269,
+          "metadata_n_hops": 4,
+          "metadata_gold_answer": "160"
+        },
+        {
+          "input": "A merchant is deciding between two investment options: buying jewelry valued at $5,000 or buying electronic gadgets valued at $8,000. According to his financial advisor's projection, the jewelry market is expected to rise by 2.5% this month, while the electronics market is expected to rise by only 1.2% over the same period. Given that the merchant wants to pick whichever option yields the larger profit by month's end, what would that maximum profit amount be? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "125",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_15",
+          "metadata_tier": "medium",
+          "metadata_token_count": 324,
+          "metadata_added_token_count": 234,
+          "metadata_n_hops": 3,
+          "metadata_gold_answer": "125"
+        },
+        {
+          "input": "A merchant is deciding between two investment options: buying jewelry valued at $5,000 or buying electronic gadgets valued at $8,000. According to his financial advisor's projection, the jewelry market is expected to rise by 2.5% this month, while the electronics market is expected to rise by only 1.2% over the same period. Given that the merchant wants to pick whichever option yields the larger profit by month's end, what would that maximum profit amount be? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "125",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_15",
+          "metadata_tier": "medium",
+          "metadata_token_count": 357,
+          "metadata_added_token_count": 267,
+          "metadata_n_hops": 3,
+          "metadata_gold_answer": "125"
+        },
+        {
+          "input": "Every hour that it stays lit, a candle loses 2 centimeters of height due to melting. If the candle burns continuously starting at 1:00 PM and continuing until 5:00 PM, by how many centimeters will it have become shorter? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "8",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_23",
+          "metadata_tier": "medium",
+          "metadata_token_count": 278,
+          "metadata_added_token_count": 240,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "8"
+        },
+        {
+          "input": "Every hour that it stays lit, a candle loses 2 centimeters of height due to melting. If the candle burns continuously starting at 1:00 PM and continuing until 5:00 PM, by how many centimeters will it have become shorter? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "8",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_23",
+          "metadata_tier": "medium",
+          "metadata_token_count": 311,
+          "metadata_added_token_count": 273,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "8"
+        },
+        {
+          "input": "Atop mount Farbo sat the great dragon Perg, who could breathe fire on anything within 1000 feet of him. Without the sapphire gemstone, Polly could throw the gold javelin -- the only weapon capable of slaying the dragon -- a distance of 400 feet, which placed her well inside the range of the dragon's fire. However, while holding the sapphire gemstone, she was able to throw the javelin three times as far as she could without it. Assuming she is holding the gemstone, how far beyond the edge of the dragon's flame range could Polly stand while still being able to hit the dragon with the javelin? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "200",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_41",
+          "metadata_tier": "medium",
+          "metadata_token_count": 360,
+          "metadata_added_token_count": 236,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "200"
+        },
+        {
+          "input": "Atop mount Farbo sat the great dragon Perg, who could breathe fire on anything within 1000 feet of him. Without the sapphire gemstone, Polly could throw the gold javelin -- the only weapon capable of slaying the dragon -- a distance of 400 feet, which placed her well inside the range of the dragon's fire. However, while holding the sapphire gemstone, she was able to throw the javelin three times as far as she could without it. Assuming she is holding the gemstone, how far beyond the edge of the dragon's flame range could Polly stand while still being able to hit the dragon with the javelin? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "200",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_41",
+          "metadata_tier": "medium",
+          "metadata_token_count": 393,
+          "metadata_added_token_count": 269,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "200"
+        },
+        {
+          "input": "Stephen ordered groceries online, and his final bill totaled $40.00. Since the order went through a delivery vendor, an additional 25% fee was applied to the total, and he was also charged a flat $3.00 delivery fee. On top of that, Stephen left a $4.00 tip. Once all these extra charges are included, what was the total final price Stephen paid for his groceries? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "57",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_58",
+          "metadata_tier": "medium",
+          "metadata_token_count": 310,
+          "metadata_added_token_count": 231,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "57"
+        },
+        {
+          "input": "Stephen ordered groceries online, and his final bill totaled $40.00. Since the order went through a delivery vendor, an additional 25% fee was applied to the total, and he was also charged a flat $3.00 delivery fee. On top of that, Stephen left a $4.00 tip. Once all these extra charges are included, what was the total final price Stephen paid for his groceries? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "57",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_58",
+          "metadata_tier": "medium",
+          "metadata_token_count": 343,
+          "metadata_added_token_count": 264,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "57"
+        },
+        {
+          "input": "Raymond does only half as much laundry as Sarah does, while Sarah does four times as much laundry as David does. Given that Sarah does 400 pounds of laundry, work out the difference between the amount of laundry Raymond does and the amount David does. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "100",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_77",
+          "metadata_tier": "medium",
+          "metadata_token_count": 277,
+          "metadata_added_token_count": 234,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "100"
+        },
+        {
+          "input": "Raymond does only half as much laundry as Sarah does, while Sarah does four times as much laundry as David does. Given that Sarah does 400 pounds of laundry, work out the difference between the amount of laundry Raymond does and the amount David does. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "100",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_77",
+          "metadata_tier": "medium",
+          "metadata_token_count": 310,
+          "metadata_added_token_count": 267,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "100"
+        }
+      ]
+    }
+  ]
+}
