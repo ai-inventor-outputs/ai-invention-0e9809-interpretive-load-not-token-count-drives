@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "source": "openai/gsm8k (config=main, split=test)",
+    "description": "Decomposition of the prior 'relevant elaboration' condition into paraphrase_only and paraphrase_scaffolding sub-conditions, length-matched to the prior medium tier (~250 added cl100k_base tokens beyond the bare question), for 8 GSM8K test-split seed problems.",
+    "medium_tier_target_added_tokens": 250,
+    "tolerance": "max(15 tokens, 10% of target)",
+    "scaffolding_text": "Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+    "approximation_note": "Seed problems are a fixed, hand-selected set of 8 GSM8K test-split indices chosen for diversity of reasoning-hop count (2-4), arithmetic-operation mix, and answer magnitude (8-200). The upstream artifacts (art_EQ9EJso6WFvP / art_tqod35nIRuWp) that used a prior 'bare/filler/elaboration' seed set were not available to this executor as a dependency, so exact seed-index-for-seed-index reproduction of that prior set could not be verified. This is a best-effort, clearly logged approximation, not a guaranteed exact match -- downstream experiment authors should treat cross-condition comparability to the original bare/filler/elaboration conditions as best-effort rather than guaranteed.",
+    "seed_indices": [
+      0,
+      1,
+      7,
+      15,
+      23,
+      41,
+      58,
+      77
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "openai/gsm8k",
+      "examples": [
+        {
+          "input": "Each day Janet's ducks produce 16 eggs. Every morning she eats three of them for breakfast, and she uses four more to bake muffins for her friends. Whatever eggs are left over, she takes to the farmers' market and sells at a price of $2 per egg. Working out her daily earnings, how many dollars does she collect at the farmers' market each day? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "18",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_0",
+          "metadata_tier": "medium",
+          "metadata_token_count": 303,
+          "metadata_added_token_count": 239,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "18"
+        },
+        {
+          "input": "Each day Janet's ducks produce 16 eggs. Every morning she eats three of them for breakfast, and she uses four more to bake muffins for her friends. Whatever eggs are left over, she takes to the farmers' market and sells at a price of $2 per egg. Working out her daily earnings, how many dollars does she collect at the farmers' market each day? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+          "output": "18",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_0",
+          "metadata_tier": "medium",
+          "metadata_token_count": 336,
+          "metadata_added_token_count": 272,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "18"
+        },
+        {
+          "input": "Making a robe requires 2 bolts of blue fabric, plus an amount of white fabric equal to half of that. What is the combined number of bolts needed in total? Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding. Reflect on the wording of the question to confirm you understand its intent. Read the problem statement carefully before working through it. Take your time to understand exactly what is being asked. Consider each piece of information given in the problem in turn. Think about how the quantities described relate to one another. Work through the situation step by step as described above. Make sure you have identified every quantity mentioned before proceeding.",
+          "output": "3",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_1",
+          "metadata_tier": "medium",
+          "metadata_token_count": 260,
+          "metadata_added_token_count": 234,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "3"
+        }
+      ]
+    }
+  ]
+}

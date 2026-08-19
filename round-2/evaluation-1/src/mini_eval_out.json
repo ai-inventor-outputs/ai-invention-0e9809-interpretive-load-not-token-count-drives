@@ -1,0 +1,855 @@
+{
+  "metadata": {
+    "step0_blocker_check": {
+      "blocked": false,
+      "n_rows_prompt_model_csv": 336,
+      "n_lines_raw_completions": 6720,
+      "n_bad_lines_raw_completions": 0
+    },
+    "metric1_paired_filler_vs_elaboration_cv_gap": {
+      "per_tier": {
+        "long": {
+          "n_seeds": 16,
+          "mean_delta_relevant_minus_filler_cv": 0.11157491246610911,
+          "ci_95_lower": -0.0004951876340687528,
+          "ci_95_upper": 0.21892253223890856,
+          "wilcoxon_statistic": 13.0,
+          "wilcoxon_p_value": 0.07536823868947248,
+          "ci_excludes_zero": false
+        },
+        "medium": {
+          "n_seeds": 16,
+          "mean_delta_relevant_minus_filler_cv": 0.35010848308310183,
+          "ci_95_lower": 0.09807873660491612,
+          "ci_95_upper": 0.6664980301880059,
+          "wilcoxon_statistic": 11.0,
+          "wilcoxon_p_value": 0.015906444101703374,
+          "ci_excludes_zero": true
+        },
+        "short": {
+          "n_seeds": 16,
+          "mean_delta_relevant_minus_filler_cv": 0.12328101625665568,
+          "ci_95_lower": -0.0007667279492161852,
+          "ci_95_upper": 0.25434367356341403,
+          "wilcoxon_statistic": 24.0,
+          "wilcoxon_p_value": 0.0735939238114404,
+          "ci_excludes_zero": false
+        }
+      },
+      "per_tier_per_model": {
+        "long": {
+          "openai/gpt-4.1-mini": {
+            "n_seeds": 16,
+            "mean_delta": 0.06918062963313087,
+            "ci_95_lower": 0.022539267640881086,
+            "ci_95_upper": 0.12254823362060743,
+            "wilcoxon_statistic": 0.0,
+            "wilcoxon_p_value": 0.017960477526078766
+          },
+          "openai/gpt-4.1-nano": {
+            "n_seeds": 16,
+            "mean_delta": 0.15269110842651698,
+            "ci_95_lower": -0.153258325474969,
+            "ci_95_upper": 0.534229256939774,
+            "wilcoxon_statistic": 14.0,
+            "wilcoxon_p_value": 0.1688069535565081
+          },
+          "openai/gpt-4o-mini": {
+            "n_seeds": 16,
+            "mean_delta": 0.11285299933867948,
+            "ci_95_lower": -0.09830580956097193,
+            "ci_95_upper": 0.30816698036668394,
+            "wilcoxon_statistic": 13.0,
+            "wilcoxon_p_value": 0.26039294361048326
+          }
+        },
+        "medium": {
+          "openai/gpt-4.1-mini": {
+            "n_seeds": 16,
+            "mean_delta": 0.29001077634265815,
+            "ci_95_lower": -0.07396898153406938,
+            "ci_95_upper": 0.839955789430711,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_p_value": 0.24886387493792206
+          },
+          "openai/gpt-4.1-nano": {
+            "n_seeds": 16,
+            "mean_delta": 0.20200129321294985,
+            "ci_95_lower": -0.0016174928742373883,
+            "ci_95_upper": 0.42951098940047283,
+            "wilcoxon_statistic": 11.0,
+            "wilcoxon_p_value": 0.09260069782067576
+          },
+          "openai/gpt-4o-mini": {
+            "n_seeds": 13,
+            "mean_delta": 0.383199625696817,
+            "ci_95_lower": 0.09955227158812138,
+            "ci_95_upper": 0.7439327166296829,
+            "wilcoxon_statistic": 0.0,
+            "wilcoxon_p_value": 0.0078125
+          }
+        },
+        "short": {
+          "openai/gpt-4.1-mini": {
+            "n_seeds": 16,
+            "mean_delta": 0.05557551800288178,
+            "ci_95_lower": -0.002475659705447343,
+            "ci_95_upper": 0.16678659530192944,
+            "wilcoxon_statistic": 3.0,
+            "wilcoxon_p_value": 0.4652088184521418
+          },
+          "openai/gpt-4.1-nano": {
+            "n_seeds": 15,
+            "mean_delta": -0.04281426186736382,
+            "ci_95_lower": -0.2680520408142761,
+            "ci_95_upper": 0.10176377488957208,
+            "wilcoxon_statistic": 13.0,
+            "wilcoxon_p_value": 0.4838398513935682
+          },
+          "openai/gpt-4o-mini": {
+            "n_seeds": 16,
+            "mean_delta": 0.32283566830514515,
+            "ci_95_lower": 0.09642676151598704,
+            "ci_95_upper": 0.6131348664084435,
+            "wilcoxon_statistic": 8.0,
+            "wilcoxon_p_value": 0.015022338553107788
+          }
+        }
+      },
+      "pooled_across_tiers_seed_x_tier_cluster": {
+        "n_clusters": 48,
+        "mean_delta": 0.19498813726862219,
+        "ci_95_lower": 0.09050876632804494,
+        "ci_95_upper": 0.3194029202680238,
+        "wilcoxon_statistic": 125.0,
+        "wilcoxon_p_value": 0.00037041911089447744,
+        "ci_excludes_zero": true
+      }
+    },
+    "metric2_cell_level_entropy_cv_correlation": {
+      "all_rows": {
+        "cv_vs_mean_entropy_first_k": {
+          "pearson": {
+            "n": 332,
+            "statistic": 0.2843176201132454,
+            "p_value": 1.3632493171262103e-07,
+            "ci_lower": 0.20078585288622045,
+            "ci_upper": 0.3667465995734314,
+            "cluster_bootstrap_ci_95_lower": 0.14953873367783643,
+            "cluster_bootstrap_ci_95_upper": 0.4071965724867569,
+            "cluster_bootstrap_n_seeds": 16,
+            "note": "naive row-level bootstrap likely anti-conservative: rows share seed_id and are not fully independent"
+          },
+          "spearman": {
+            "n": 332,
+            "statistic": 0.41274217283457293,
+            "p_value": 4.3416612979411174e-15,
+            "ci_lower": 0.3160725522525924,
+            "ci_upper": 0.5015424073791387,
+            "cluster_bootstrap_ci_95_lower": 0.23222159854306054,
+            "cluster_bootstrap_ci_95_upper": 0.541237541030112,
+            "cluster_bootstrap_n_seeds": 16,
+            "note": "naive row-level bootstrap likely anti-conservative: rows share seed_id and are not fully independent"
+          }
+        },
+        "cv_vs_answer_token_entropy": {
+          "pearson": {
+            "n": 332,
+            "statistic": 0.2604672191580509,
+            "p_value": 1.4992162202141252e-06,
+            "ci_lower": 0.1644651549494792,
+            "ci_upper": 0.37394387304190485,
+            "cluster_bootstrap_ci_95_lower": 0.15408230512892504,
+            "cluster_bootstrap_ci_95_upper": 0.44696485341734965,
+            "cluster_bootstrap_n_seeds": 16,
+            "note": "naive row-level bootstrap likely anti-conservative: rows share seed_id and are not fully independent"
+          },
+          "spearman": {
+            "n": 332,
+            "statistic": 0.47060341086096674,
+            "p_value": 1.0613836007230294e-19,
+            "ci_lower": 0.38035639533927695,
+            "ci_upper": 0.5522824853348147,
+            "cluster_bootstrap_ci_95_lower": 0.32680166502018887,
+            "cluster_bootstrap_ci_95_upper": 0.6044962401619569,
+            "cluster_bootstrap_n_seeds": 16,
+            "note": "naive row-level bootstrap likely anti-conservative: rows share seed_id and are not fully independent"
+          }
+        }
+      },
+      "by_content_type": {
+        "bare": {
+          "cv_vs_mean_entropy_first_k": {
+            "pearson": {
+              "n": 48,
+              "statistic": 0.17027562099828783,
+              "p_value": 0.24723923551509225,
+              "ci_lower": -0.03419576596039314,
+              "ci_upper": 0.47157821746684264
+            },
+            "spearman": {
+              "n": 48,
+              "statistic": 0.4139551389230485,
+              "p_value": 0.003446623897406478,
+              "ci_lower": 0.12868319320083166,
+              "ci_upper": 0.6422915569509793
+            }
+          },
+          "cv_vs_answer_token_entropy": {
+            "pearson": {
+              "n": 48,
+              "statistic": 0.11822729894138193,
+              "p_value": 0.42352304460330903,
+              "ci_lower": -0.03452660028086738,
+              "ci_upper": 0.5422772401919204
+            },
+            "spearman": {
+              "n": 48,
+              "statistic": 0.47796812333848404,
+              "p_value": 0.0005909350680033211,
+              "ci_lower": 0.23279056896707448,
+              "ci_upper": 0.6658366139837274
+            }
+          }
+        },
+        "filler": {
+          "cv_vs_mean_entropy_first_k": {
+            "pearson": {
+              "n": 144,
+              "statistic": 0.25097732156670677,
+              "p_value": 0.0024117664794026396,
+              "ci_lower": 0.1182979347289484,
+              "ci_upper": 0.3696295585639293
+            },
+            "spearman": {
+              "n": 144,
+              "statistic": 0.3358481510745401,
+              "p_value": 3.86787481647296e-05,
+              "ci_lower": 0.17582236425065903,
+              "ci_upper": 0.48081506462738177
+            }
+          },
+          "cv_vs_answer_token_entropy": {
+            "pearson": {
+              "n": 144,
+              "statistic": 0.3010683649554241,
+              "p_value": 0.00024561958256670227,
+              "ci_lower": 0.1647653294975518,
+              "ci_upper": 0.5308020121710921
+            },
+            "spearman": {
+              "n": 144,
+              "statistic": 0.5232044213797122,
+              "p_value": 1.72231121511258e-11,
+              "ci_lower": 0.38489747283388703,
+              "ci_upper": 0.6381568014093949
+            }
+          }
+        },
+        "relevant": {
+          "cv_vs_mean_entropy_first_k": {
+            "pearson": {
+              "n": 140,
+              "statistic": 0.2975919641496566,
+              "p_value": 0.00035583829334448464,
+              "ci_lower": 0.18046593106038608,
+              "ci_upper": 0.40686343314456275
+            },
+            "spearman": {
+              "n": 140,
+              "statistic": 0.38314389780040964,
+              "p_value": 2.9778912042682585e-06,
+              "ci_lower": 0.23457548450248206,
+              "ci_upper": 0.5189192279459249
+            }
+          },
+          "cv_vs_answer_token_entropy": {
+            "pearson": {
+              "n": 140,
+              "statistic": 0.2245163309820676,
+              "p_value": 0.007657000280918464,
+              "ci_lower": 0.0666232703298897,
+              "ci_upper": 0.388628569565124
+            },
+            "spearman": {
+              "n": 140,
+              "statistic": 0.381357045096626,
+              "p_value": 3.339739801988698e-06,
+              "ci_lower": 0.2281626907430336,
+              "ci_upper": 0.5200922356882379
+            }
+          }
+        }
+      }
+    },
+    "metric3_per_model_x_condition_breakdown": {
+      "openai/gpt-4.1-mini": {
+        "bare|bare": {
+          "n": 16,
+          "mean_cv": 0.021506367368007318,
+          "mean_entropy_first_k": 0.29723654366877517,
+          "mean_answer_token_entropy": 0.0009169645975551667,
+          "mean_frac_correct": 0.971875
+        },
+        "filler|long": {
+          "n": 16,
+          "mean_cv": 0.020487419427311193,
+          "mean_entropy_first_k": 0.3145216857529809,
+          "mean_answer_token_entropy": 8.608009582507666e-06,
+          "mean_frac_correct": 0.975
+        },
+        "filler|medium": {
+          "n": 16,
+          "mean_cv": 0.25220926866088217,
+          "mean_entropy_first_k": 0.30071950312686146,
+          "mean_answer_token_entropy": 6.521793464850775e-06,
+          "mean_frac_correct": 0.971875
+        },
+        "filler|short": {
+          "n": 16,
+          "mean_cv": 0.02963994005708475,
+          "mean_entropy_first_k": 0.30001674044480414,
+          "mean_answer_token_entropy": 1.6390283692869093e-05,
+          "mean_frac_correct": 0.9625
+        },
+        "relevant|long": {
+          "n": 16,
+          "mean_cv": 0.08966804906044207,
+          "mean_entropy_first_k": 0.4779677554294818,
+          "mean_answer_token_entropy": 0.006910477626007101,
+          "mean_frac_correct": 0.9253138354700855
+        },
+        "relevant|medium": {
+          "n": 16,
+          "mean_cv": 0.5422200450035403,
+          "mean_entropy_first_k": 0.436229234731062,
+          "mean_answer_token_entropy": 0.0015995253991465499,
+          "mean_frac_correct": 0.9064236111111111
+        },
+        "relevant|short": {
+          "n": 16,
+          "mean_cv": 0.08521545805996653,
+          "mean_entropy_first_k": 0.39628075865791124,
+          "mean_answer_token_entropy": 2.5928024515814962e-05,
+          "mean_frac_correct": 0.9622258771929825
+        }
+      },
+      "openai/gpt-4.1-nano": {
+        "bare|bare": {
+          "n": 16,
+          "mean_cv": 0.30225962690240826,
+          "mean_entropy_first_k": 0.33845763247967453,
+          "mean_answer_token_entropy": 0.0032268653122519723,
+          "mean_frac_correct": 0.8992743808049536
+        },
+        "filler|long": {
+          "n": 16,
+          "mean_cv": 0.2771738199992326,
+          "mean_entropy_first_k": 0.32720344403359236,
+          "mean_answer_token_entropy": 0.009873565210670582,
+          "mean_frac_correct": 0.8808006535947712
+        },
+        "filler|medium": {
+          "n": 16,
+          "mean_cv": 0.228505555505499,
+          "mean_entropy_first_k": 0.3348998252805122,
+          "mean_answer_token_entropy": 0.015449117782274832,
+          "mean_frac_correct": 0.8152267156862745
+        },
+        "filler|short": {
+          "n": 16,
+          "mean_cv": 0.34219710040678275,
+          "mean_entropy_first_k": 0.34282131318639775,
+          "mean_answer_token_entropy": 0.009345410472802245,
+          "mean_frac_correct": 0.8662202380952381
+        },
+        "relevant|long": {
+          "n": 16,
+          "mean_cv": 0.4298649284257495,
+          "mean_entropy_first_k": 0.47342421349207336,
+          "mean_answer_token_entropy": 0.021243124898900234,
+          "mean_frac_correct": 0.8219572368421053
+        },
+        "relevant|medium": {
+          "n": 16,
+          "mean_cv": 0.4305068487184489,
+          "mean_entropy_first_k": 0.45168639921300285,
+          "mean_answer_token_entropy": 0.02411353839837795,
+          "mean_frac_correct": 0.7875361362493716
+        },
+        "relevant|short": {
+          "n": 15,
+          "mean_cv": 0.32219597856653776,
+          "mean_entropy_first_k": 0.417270472158308,
+          "mean_answer_token_entropy": 0.020850441753786246,
+          "mean_frac_correct": 0.8485185185185186
+        }
+      },
+      "openai/gpt-4o-mini": {
+        "bare|bare": {
+          "n": 16,
+          "mean_cv": 0.1848280782718718,
+          "mean_entropy_first_k": 0.3671972143772421,
+          "mean_answer_token_entropy": 0.0002457838247352983,
+          "mean_frac_correct": 0.8464052851388377
+        },
+        "filler|long": {
+          "n": 16,
+          "mean_cv": 0.2676893683165797,
+          "mean_entropy_first_k": 0.3811790149541102,
+          "mean_answer_token_entropy": 0.017486771925849704,
+          "mean_frac_correct": 0.86561004784689
+        },
+        "filler|medium": {
+          "n": 16,
+          "mean_cv": 0.35023127530568754,
+          "mean_entropy_first_k": 0.37006716822174224,
+          "mean_answer_token_entropy": 0.0019444041939462213,
+          "mean_frac_correct": 0.8821074033680458
+        },
+        "filler|short": {
+          "n": 16,
+          "mean_cv": 0.15276592384617696,
+          "mean_entropy_first_k": 0.3746595089405804,
+          "mean_answer_token_entropy": 0.015340563218216897,
+          "mean_frac_correct": 0.9014957264957265
+        },
+        "relevant|long": {
+          "n": 16,
+          "mean_cv": 0.3805423676552592,
+          "mean_entropy_first_k": 0.5896093262227327,
+          "mean_answer_token_entropy": 0.014756145522012319,
+          "mean_frac_correct": 0.7760416666666666
+        },
+        "relevant|medium": {
+          "n": 13,
+          "mean_cv": 0.4434351685958141,
+          "mean_entropy_first_k": 0.5334927417477533,
+          "mean_answer_token_entropy": 0.007665888126643355,
+          "mean_frac_correct": 0.8184971890854242
+        },
+        "relevant|short": {
+          "n": 16,
+          "mean_cv": 0.4756015921513221,
+          "mean_entropy_first_k": 0.47973080718660266,
+          "mean_answer_token_entropy": 0.008550638681499308,
+          "mean_frac_correct": 0.7837754259629259
+        }
+      }
+    },
+    "metric4_robust_outlier_trimmed_dispersion": {
+      "too_small_to_trim_n_cells": 43,
+      "too_small_cells": [
+        {
+          "prompt_id": "seed_000_relevant_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_002_relevant_short",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_005_relevant_long",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_006_bare_bare",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_006_filler_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_006_filler_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 4
+        },
+        {
+          "prompt_id": "seed_006_relevant_long",
+          "model": "openai/gpt-4.1-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_006_relevant_long",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 4
+        },
+        {
+          "prompt_id": "seed_006_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 4
+        },
+        {
+          "prompt_id": "seed_006_relevant_medium",
+          "model": "openai/gpt-4.1-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_006_relevant_medium",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_006_relevant_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 1
+        },
+        {
+          "prompt_id": "seed_006_relevant_short",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_006_relevant_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_007_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_007_relevant_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 6
+        },
+        {
+          "prompt_id": "seed_010_relevant_short",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 1
+        },
+        {
+          "prompt_id": "seed_011_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_012_filler_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_012_filler_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_012_relevant_long",
+          "model": "openai/gpt-4.1-mini",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_012_relevant_long",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_012_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 2
+        },
+        {
+          "prompt_id": "seed_012_relevant_medium",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_012_relevant_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 1
+        },
+        {
+          "prompt_id": "seed_012_relevant_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_013_bare_bare",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_013_filler_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_013_filler_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_013_filler_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_013_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_013_relevant_medium",
+          "model": "openai/gpt-4.1-mini",
+          "n_valid_samples": 4
+        },
+        {
+          "prompt_id": "seed_013_relevant_medium",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 2
+        },
+        {
+          "prompt_id": "seed_013_relevant_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 1
+        },
+        {
+          "prompt_id": "seed_013_relevant_short",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 9
+        },
+        {
+          "prompt_id": "seed_013_relevant_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_014_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 6
+        },
+        {
+          "prompt_id": "seed_014_relevant_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 7
+        },
+        {
+          "prompt_id": "seed_015_filler_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 8
+        },
+        {
+          "prompt_id": "seed_015_relevant_long",
+          "model": "openai/gpt-4.1-nano",
+          "n_valid_samples": 6
+        },
+        {
+          "prompt_id": "seed_015_relevant_long",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 5
+        },
+        {
+          "prompt_id": "seed_015_relevant_medium",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 4
+        },
+        {
+          "prompt_id": "seed_015_relevant_short",
+          "model": "openai/gpt-4o-mini",
+          "n_valid_samples": 7
+        }
+      ],
+      "per_tier": {
+        "long": {
+          "standard_cv": {
+            "n_seeds": 16,
+            "mean_delta": 0.11157491246610911,
+            "ci_95_lower": -0.0015563942638206854,
+            "ci_95_upper": 0.22122415422663194
+          },
+          "mad_over_median": {
+            "n_seeds": 16,
+            "mean_delta": 0.06780019631657039,
+            "ci_95_lower": 0.021156330749354003,
+            "ci_95_upper": 0.12390107862129975
+          },
+          "trimmed_cv": {
+            "n_seeds": 14,
+            "mean_delta": 0.0029386119680660542,
+            "ci_95_lower": -0.08563201794448481,
+            "ci_95_upper": 0.09444785384868297
+          }
+        },
+        "medium": {
+          "standard_cv": {
+            "n_seeds": 16,
+            "mean_delta": 0.35010848308310183,
+            "ci_95_lower": 0.09333448177233089,
+            "ci_95_upper": 0.6509587979864825
+          },
+          "mad_over_median": {
+            "n_seeds": 16,
+            "mean_delta": 0.12425645314924974,
+            "ci_95_lower": 0.022626038603760137,
+            "ci_95_upper": 0.25601519278108253
+          },
+          "trimmed_cv": {
+            "n_seeds": 14,
+            "mean_delta": 0.12068411031663517,
+            "ci_95_lower": -0.0004027114203882473,
+            "ci_95_upper": 0.2937852729257699
+          }
+        },
+        "short": {
+          "standard_cv": {
+            "n_seeds": 16,
+            "mean_delta": 0.12328101625665568,
+            "ci_95_lower": -0.002172801664039801,
+            "ci_95_upper": 0.25042067515850724
+          },
+          "mad_over_median": {
+            "n_seeds": 16,
+            "mean_delta": 0.022359498226743293,
+            "ci_95_lower": -0.00538509690799594,
+            "ci_95_upper": 0.07419950738916256
+          },
+          "trimmed_cv": {
+            "n_seeds": 16,
+            "mean_delta": -0.050276070372699114,
+            "ci_95_lower": -0.1574815111847085,
+            "ci_95_upper": 0.029988619855744254
+          }
+        }
+      }
+    },
+    "metric5_decomposition_comparison": {
+      "skipped": true,
+      "reason": "Candidate artifacts found but none matched the expected 4-condition decomposition schema (paraphrase-only / paraphrase+scaffolding / original elaboration / filler) needed for this metric; not applying the toolkit to a mismatched schema.",
+      "candidates_checked": [
+        "/ai-inventor/aii_data/runs/run_l-N7kpGv9Lri/3_invention_loop/iter_2/gen_art/gen_art_experiment_1/full_method_out.json"
+      ]
+    },
+    "narrative_verdicts_per_hypothesis_claim": {
+      "claim_elaboration_destabilizes_more_than_filler": {
+        "status": "REMAINS_DESCRIPTIVE",
+        "tiers_ci_excludes_zero_and_positive": [
+          "medium"
+        ],
+        "tiers_ci_crosses_zero_or_negative": [
+          "long",
+          "short"
+        ],
+        "pooled_ci_excludes_zero": true
+      },
+      "claim_entropy_correlates_with_cv": {
+        "status": "STATISTICALLY_SUPPORTED",
+        "cell_level_pearson_r_cv_vs_mean_entropy_first_k": 0.2843176201132454,
+        "cell_level_pearson_r_cv_vs_answer_token_entropy": 0.2604672191580509,
+        "cluster_bootstrap_ci_excludes_zero_first_k": true,
+        "cluster_bootstrap_ci_excludes_zero_token": true,
+        "within_content_type_signal_survives": true,
+        "interpretation": "Some within-condition signal survives, weakening the pure between-condition-variance explanation"
+      },
+      "claim_gap_robust_to_outliers": {
+        "status": "REMAINS_DESCRIPTIVE",
+        "tiers_checked": 3,
+        "tiers_same_sign_across_cv_mad_trimmed": 2
+      }
+    },
+    "superseded_prior_draft_numbers": [
+      "The prior draft's r=0.75/r=0.59 entropy-CV correlations computed over 7 condition-mean rows are SUPERSEDED by cell-level (n=336) correlations: Pearson r(cv, mean_entropy_first_k)=0.284, Pearson r(cv, answer_token_entropy)=0.260. Downstream text must cite the cell-level r/rho with bootstrap CIs, not the condition-mean r.",
+      "The raw CV point estimates by content_type x length_tier in the prior draft (e.g. filler medium 0.277, relevant medium 0.474) are SUPERSEDED as evidence of a 'gap' by the paired, seed-clustered bootstrap deltas and Wilcoxon tests in Metric 1 -- the point estimates themselves are retained as descriptive means but must be reported alongside the CI/p-value, never alone.",
+      "Any claim that the elaboration>filler pattern is general is SUPERSEDED by the per-model breakdown (Metric 3): the pattern must be checked/reported per model, since all 3 models are same-provider/same-family.",
+      "Any claim about CV-based gap magnitude that does not address outlier sensitivity is SUPERSEDED by the MAD/trimmed-CV cross-check (Metric 4)."
+    ],
+    "n_bootstrap_resamples": 10000,
+    "rng_seed": 12345
+  },
+  "metrics_agg": {
+    "blocked": 0.0,
+    "m1_tierlong_mean_delta_cv_relevant_minus_filler": 0.11157491246610911,
+    "m1_tierlong_ci_lower": -0.0004951876340687528,
+    "m1_tierlong_ci_upper": 0.21892253223890856,
+    "m1_tierlong_wilcoxon_p": 0.07536823868947248,
+    "m1_tiermedium_mean_delta_cv_relevant_minus_filler": 0.35010848308310183,
+    "m1_tiermedium_ci_lower": 0.09807873660491612,
+    "m1_tiermedium_ci_upper": 0.6664980301880059,
+    "m1_tiermedium_wilcoxon_p": 0.015906444101703374,
+    "m1_tiershort_mean_delta_cv_relevant_minus_filler": 0.12328101625665568,
+    "m1_tiershort_ci_lower": -0.0007667279492161852,
+    "m1_tiershort_ci_upper": 0.25434367356341403,
+    "m1_tiershort_wilcoxon_p": 0.0735939238114404,
+    "m1_pooled_mean_delta": 0.19498813726862219,
+    "m1_pooled_ci_lower": 0.09050876632804494,
+    "m1_pooled_ci_upper": 0.3194029202680238,
+    "m1_pooled_wilcoxon_p": 0.00037041911089447744,
+    "m2_pearson_r_cv_entropy_first_k": 0.2843176201132454,
+    "m2_pearson_r_cv_entropy_first_k_p": 1.3632493171262103e-07,
+    "m2_spearman_rho_cv_entropy_first_k": 0.41274217283457293,
+    "m2_pearson_r_cv_answer_token_entropy": 0.2604672191580509,
+    "m2_pearson_r_cv_answer_token_entropy_p": 1.4992162202141252e-06,
+    "m2_spearman_rho_cv_answer_token_entropy": 0.47060341086096674,
+    "n_prompt_model_rows": 332.0,
+    "n_seeds": 16.0,
+    "n_raw_completions": 6720.0,
+    "m4_too_small_to_trim_n_cells": 43.0
+  },
+  "datasets": [
+    {
+      "dataset": "gsm8k_length_matched_prompt_model_results",
+      "examples": [
+        {
+          "input": "prompt_id=seed_000_bare_bare, model=openai/gpt-4.1-mini, content_type=bare, length_tier=bare",
+          "output": "cv=0.0000, frac_correct=1.0000, mean_entropy_first_k=0.2841, answer_token_entropy=0.000003",
+          "metadata_seed_id": "seed_000",
+          "metadata_content_type": "bare",
+          "metadata_length_tier": "bare",
+          "metadata_cv": 0.0,
+          "metadata_variance": 0.0,
+          "metadata_frac_correct": 1.0,
+          "metadata_mean_entropy_first_k": 0.2841407167804791,
+          "metadata_answer_token_entropy": 2.77147157456032e-06,
+          "metadata_n_valid_samples": 20,
+          "predict_our_method": "openai/gpt-4.1-mini",
+          "eval_cv": 0.0,
+          "eval_frac_correct": 1.0,
+          "eval_mean_entropy_first_k": 0.2841407167804791,
+          "eval_answer_token_entropy": 2.77147157456032e-06
+        },
+        {
+          "input": "prompt_id=seed_000_bare_bare, model=openai/gpt-4.1-nano, content_type=bare, length_tier=bare",
+          "output": "cv=0.0000, frac_correct=1.0000, mean_entropy_first_k=0.3728, answer_token_entropy=0.000021",
+          "metadata_seed_id": "seed_000",
+          "metadata_content_type": "bare",
+          "metadata_length_tier": "bare",
+          "metadata_cv": 0.0,
+          "metadata_variance": 0.0,
+          "metadata_frac_correct": 1.0,
+          "metadata_mean_entropy_first_k": 0.3728432172632847,
+          "metadata_answer_token_entropy": 2.1221009282559204e-05,
+          "metadata_n_valid_samples": 20,
+          "predict_our_method": "openai/gpt-4.1-nano",
+          "eval_cv": 0.0,
+          "eval_frac_correct": 1.0,
+          "eval_mean_entropy_first_k": 0.3728432172632847,
+          "eval_answer_token_entropy": 2.1221009282559204e-05
+        },
+        {
+          "input": "prompt_id=seed_000_bare_bare, model=openai/gpt-4o-mini, content_type=bare, length_tier=bare",
+          "output": "cv=0.0000, frac_correct=1.0000, mean_entropy_first_k=0.2058, answer_token_entropy=0.000000",
+          "metadata_seed_id": "seed_000",
+          "metadata_content_type": "bare",
+          "metadata_length_tier": "bare",
+          "metadata_cv": 0.0,
+          "metadata_variance": 0.0,
+          "metadata_frac_correct": 1.0,
+          "metadata_mean_entropy_first_k": 0.2058275274431994,
+          "metadata_answer_token_entropy": 2.435435002200207e-07,
+          "metadata_n_valid_samples": 14,
+          "predict_our_method": "openai/gpt-4o-mini",
+          "eval_cv": 0.0,
+          "eval_frac_correct": 1.0,
+          "eval_mean_entropy_first_k": 0.2058275274431994,
+          "eval_answer_token_entropy": 2.435435002200207e-07
+        }
+      ]
+    }
+  ]
+}

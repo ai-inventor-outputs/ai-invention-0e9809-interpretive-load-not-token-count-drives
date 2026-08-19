@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "source": "openai/gsm8k (config=main, split=test)",
+    "description": "Decomposition of the prior 'relevant elaboration' condition into paraphrase_only and paraphrase_scaffolding sub-conditions, length-matched to the prior medium tier (~250 added cl100k_base tokens beyon...",
+    "medium_tier_target_added_tokens": 250,
+    "tolerance": "max(15 tokens, 10% of target)",
+    "scaffolding_text": "Double-check your units at each step. Verify each step of your reasoning before moving to the next. Make sure the final answer is consistent with the constraints stated above.",
+    "approximation_note": "Seed problems are a fixed, hand-selected set of 8 GSM8K test-split indices chosen for diversity of reasoning-hop count (2-4), arithmetic-operation mix, and answer magnitude (8-200). The upstream artif...",
+    "seed_indices": [
+      0,
+      1,
+      7
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "openai/gsm8k",
+      "examples": [
+        {
+          "input": "Each day Janet's ducks produce 16 eggs. Every morning she eats three of them for breakfast, and she uses four more to bake muffins for her friends. Whatever eggs are left over, she takes to the farmer...",
+          "output": "18",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_0",
+          "metadata_tier": "medium",
+          "metadata_token_count": 303,
+          "metadata_added_token_count": 239,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "18"
+        },
+        {
+          "input": "Each day Janet's ducks produce 16 eggs. Every morning she eats three of them for breakfast, and she uses four more to bake muffins for her friends. Whatever eggs are left over, she takes to the farmer...",
+          "output": "18",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_scaffolding",
+          "metadata_seed_id": "gsm8k_test_0",
+          "metadata_tier": "medium",
+          "metadata_token_count": 336,
+          "metadata_added_token_count": 272,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "18"
+        },
+        {
+          "input": "Making a robe requires 2 bolts of blue fabric, plus an amount of white fabric equal to half of that. What is the combined number of bolts needed in total? Read the problem statement carefully before w...",
+          "output": "3",
+          "metadata_fold": "decomposition_probe",
+          "metadata_content_type": "paraphrase_only",
+          "metadata_seed_id": "gsm8k_test_1",
+          "metadata_tier": "medium",
+          "metadata_token_count": 260,
+          "metadata_added_token_count": 234,
+          "metadata_n_hops": 2,
+          "metadata_gold_answer": "3"
+        }
+      ]
+    }
+  ]
+}

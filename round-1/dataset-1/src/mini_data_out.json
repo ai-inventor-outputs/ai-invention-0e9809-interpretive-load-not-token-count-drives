@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "description": "GSM8K/SVAMP seeded numeric-reasoning prompts, expanded into relevant-elaboration and irrelevant-filler variants at 3 token-matched length tiers plus a bare-question control.",
+    "tokenizer": "tiktoken cl100k_base",
+    "tier_targets_extra_tokens": {
+      "1": 75,
+      "2": 250,
+      "3": 650
+    },
+    "tolerance_frac": 0.1,
+    "tolerance_min_tokens": 15
+  },
+  "datasets": [
+    {
+      "dataset": "gsm8k_length_matched",
+      "examples": [
+        {
+          "input": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "output": "18",
+          "metadata_seed_id": "gsm8k_0",
+          "metadata_content_type": "control",
+          "metadata_length_tier": 0,
+          "metadata_token_count": 64,
+          "metadata_source_dataset": "openai/gsm8k",
+          "metadata_difficulty_bucket": "easy",
+          "metadata_leakage_check_passed": true
+        },
+        {
+          "input": "Before answering, restate the problem carefully: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market? Note the key\n\nJanet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "output": "18",
+          "metadata_seed_id": "gsm8k_0",
+          "metadata_content_type": "relevant",
+          "metadata_length_tier": 1,
+          "metadata_token_count": 140,
+          "metadata_target_extra_tokens": 75,
+          "metadata_actual_extra_tokens": 76,
+          "metadata_tolerance_tokens": 15,
+          "metadata_within_tolerance": true,
+          "metadata_source_dataset": "openai/gsm8k",
+          "metadata_difficulty_bucket": "easy",
+          "metadata_leakage_check_passed": true
+        },
+        {
+          "input": "Cumulus clouds form when warm air rises and cools, condensing water vapor into visible droplets that drift lazily across an open sky. The city of Kyoto served as the imperial capital for centuries before the seat of government eventually relocated to Tokyo during a period of rapid modernization. The lighthouse keeper maintained a strict routine, polishing the lens each evening and logging the weather\n\nJanet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "output": "18",
+          "metadata_seed_id": "gsm8k_0",
+          "metadata_content_type": "filler",
+          "metadata_length_tier": 1,
+          "metadata_token_count": 140,
+          "metadata_target_extra_tokens": 75,
+          "metadata_actual_extra_tokens": 76,
+          "metadata_tolerance_tokens": 15,
+          "metadata_within_tolerance": true,
+          "metadata_source_dataset": "openai/gsm8k",
+          "metadata_difficulty_bucket": "easy",
+          "metadata_leakage_check_passed": true
+        }
+      ]
+    }
+  ]
+}

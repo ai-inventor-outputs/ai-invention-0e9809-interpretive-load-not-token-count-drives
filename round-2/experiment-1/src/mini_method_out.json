@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "method_name": "paraphrase_restatement_vs_scaffolding_decomposition",
+    "description": "Decomposes iter-1's confounded 'relevant elaboration' condition into pure redundant-restatement (paraphrase_only) and restatement+scaffolding (paraphrase_scaffold), sampled alongside carried-forward bare control and length-matched filler, to isolate whether restatement alone or generic verification scaffolding drives numeric-answer instability.",
+    "summary_stats": {
+      "n_prompts": 32,
+      "n_models": 3,
+      "models_used": [
+        "openai/gpt-4o-mini",
+        "openai/gpt-4.1-mini",
+        "openai/gpt-4.1-nano"
+      ],
+      "n_total_calls_attempted": 1440,
+      "n_total_calls_succeeded": 296,
+      "total_cost_usd": 0.33258635000000025,
+      "budget_stopped_early": false,
+      "mean_cv_by_content_type_length_tier": {
+        "control|0": 0.1952762239406981,
+        "filler|2": 0.15796047451230577,
+        "paraphrase_only|2": 0.26140042993513923,
+        "paraphrase_scaffold|2": 0.1604257422196678
+      },
+      "mean_entropy_first_k_by_content_type_length_tier": {
+        "control|0": 0.28094937838990636,
+        "filler|2": 0.26789164924707765,
+        "paraphrase_only|2": 0.26197135270490884,
+        "paraphrase_scaffold|2": 0.45867296175026845
+      },
+      "mean_answer_token_entropy_by_content_type_length_tier": {
+        "control|0": 0.0004203747620632487,
+        "filler|2": 0.00022803455024773662,
+        "paraphrase_only|2": 0.00039601062487784996,
+        "paraphrase_scaffold|2": 0.004853588919198065
+      },
+      "mean_frac_correct_by_content_type_length_tier": {
+        "control|0": 0.8194444444444445,
+        "filler|2": 0.9,
+        "paraphrase_only|2": 0.8544973544973545,
+        "paraphrase_scaffold|2": 0.6051587301587301
+      },
+      "pct_rows_low_n": 0.7604166666666666,
+      "pct_rows_missing_logprobs": 0.0,
+      "models_with_logprob_support": [
+        "openai/gpt-4.1-mini",
+        "openai/gpt-4.1-nano",
+        "openai/gpt-4o-mini"
+      ],
+      "models_with_no_logprob_support": []
+    },
+    "decomposition_comparison": {
+      "control_mean_cv": 0.19527622394069807,
+      "control_mean_variance": 6.0,
+      "control_mean_frac_correct": 0.8194444444444445,
+      "control_mean_entropy_first_k": 0.28094937838990636,
+      "control_n_prompt_model_cells": 24,
+      "filler_mean_cv": 0.15796047451230577,
+      "filler_mean_variance": 13.910000000000002,
+      "filler_mean_frac_correct": 0.9,
+      "filler_mean_entropy_first_k": 0.26789164924707765,
+      "filler_n_prompt_model_cells": 24,
+      "paraphrase_only_mean_cv": 0.26140042993513923,
+      "paraphrase_only_mean_variance": 20.112566137566137,
+      "paraphrase_only_mean_frac_correct": 0.8544973544973544,
+      "paraphrase_only_mean_entropy_first_k": 0.26197135270490884,
+      "paraphrase_only_n_prompt_model_cells": 24,
+      "paraphrase_scaffold_mean_cv": 0.1604257422196678,
+      "paraphrase_scaffold_mean_variance": 380.94742063492055,
+      "paraphrase_scaffold_mean_frac_correct": 0.6051587301587301,
+      "paraphrase_scaffold_mean_entropy_first_k": 0.45867296175026845,
+      "paraphrase_scaffold_n_prompt_model_cells": 24,
+      "restatement_effect_cv": 0.10343995542283346,
+      "scaffolding_effect_cv": -0.10097468771547144,
+      "restatement_effect_entropy_first_k": -0.005920296542168801,
+      "scaffolding_effect_entropy_first_k": 0.1967016090453596
+    },
+    "config": {
+      "n_samples": 15,
+      "temperature": 0.7,
+      "max_tokens": 400,
+      "top_logprobs": 5,
+      "first_k_tokens": 20,
+      "hard_budget_usd": 6.93,
+      "iter1_prior_spend_usd": 2.0652959499999946,
+      "shared_max_budget_usd": 10.0
+    },
+    "deviations_from_plan": [
+      "Plan expected a paired sibling dataset artifact producing paraphrase_only/paraphrase_scaffold prompts. At execution time iter_2/gen_art/gen_art_dataset_1 has not produced a full_data_out.json, so per fallback_plan step 1 we constructed both conditions ourselves in build_dataset.py from iter-1's canonical (question, gold) control rows, rather than from iter-1's tier-2 'relevant' field -- that field was found to be corrupted (contains a literal unsubstituted '{question}' template placeholder and truncates mid-sentence), so text-surgery on it would have laundered the bug forward. Logged as 'metadata_self_constructed_fallback': true on the new rows.",
+      "Reduced N_SAMPLES from the plan's stated 15 only if the hard budget forces early stop (see budget_stopped_early in summary_stats); otherwise ran the full 15 samples/cell as planned."
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "gsm8k_paraphrase_decomposition",
+      "examples": [
+        {
+          "input": "gsm8k_0__control__t0",
+          "output": "{\"gold_answer\": 18.0, \"answer_mean\": NaN}",
+          "metadata_content_type": "control",
+          "metadata_length_tier": 0,
+          "metadata_token_count": 64,
+          "metadata_n_valid_samples": 0,
+          "metadata_answer_cv": null,
+          "metadata_answer_variance": null,
+          "metadata_frac_correct": null,
+          "metadata_mean_logprob_entropy_first_k": 0.18201128362468602,
+          "metadata_mean_answer_token_entropy": NaN,
+          "metadata_low_n_flag": true,
+          "predict_our_method": "model=openai/gpt-4.1-mini"
+        },
+        {
+          "input": "gsm8k_0__control__t0",
+          "output": "{\"gold_answer\": 18.0, \"answer_mean\": 18.0}",
+          "metadata_content_type": "control",
+          "metadata_length_tier": 0,
+          "metadata_token_count": 64,
+          "metadata_n_valid_samples": 2,
+          "metadata_answer_cv": 0.0,
+          "metadata_answer_variance": 0.0,
+          "metadata_frac_correct": 1.0,
+          "metadata_mean_logprob_entropy_first_k": 0.22830857085292586,
+          "metadata_mean_answer_token_entropy": 0.005671844855708408,
+          "metadata_low_n_flag": true,
+          "predict_our_method": "model=openai/gpt-4.1-nano"
+        },
+        {
+          "input": "gsm8k_0__control__t0",
+          "output": "{\"gold_answer\": 18.0, \"answer_mean\": 18.0}",
+          "metadata_content_type": "control",
+          "metadata_length_tier": 0,
+          "metadata_token_count": 64,
+          "metadata_n_valid_samples": 10,
+          "metadata_answer_cv": 0.0,
+          "metadata_answer_variance": 0.0,
+          "metadata_frac_correct": 1.0,
+          "metadata_mean_logprob_entropy_first_k": 0.33228903141004623,
+          "metadata_mean_answer_token_entropy": 1.1618323006367093e-08,
+          "metadata_low_n_flag": false,
+          "predict_our_method": "model=openai/gpt-4o-mini"
+        }
+      ]
+    }
+  ]
+}

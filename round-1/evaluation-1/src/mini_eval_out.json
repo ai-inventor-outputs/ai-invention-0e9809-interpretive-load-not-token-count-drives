@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "evaluation_name": "Filler vs Elaboration Length Effects on LLM Numeric-Answer Variance",
+    "status": "OK",
+    "source_table": "/ai-inventor/aii_data/runs/run_l-N7kpGv9Lri/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/method_out.json",
+    "n_boot_paired": 10000,
+    "n_boot_mediation": 5000,
+    "alpha": 0.05,
+    "rng_seed": 20260819,
+    "cv_exclusions": {
+      "cv_undefined_excluded": [
+        {
+          "seed_problem_id": "seed_000",
+          "model_id": "openai/gpt-4o-mini",
+          "content_type": "baseline",
+          "length_tier": "bare",
+          "reason": "answer_mean is 0 or missing sd/mean -> CV undefined"
+        },
+        {
+          "seed_problem_id": "seed_000",
+          "model_id": "openai/gpt-4o-mini",
+          "content_type": "relevant_elaboration",
+          "length_tier": "medium",
+          "reason": "answer_mean is 0 or missing sd/mean -> CV undefined"
+        },
+        {
+          "seed_problem_id": "seed_000",
+          "model_id": "openai/gpt-4o-mini",
+          "content_type": "relevant_elaboration",
+          "length_tier": "short",
+          "reason": "answer_mean is 0 or missing sd/mean -> CV undefined"
+        }
+      ],
+      "refusal_rates": {},
+      "n_cells_before_cv_filter": 21,
+      "n_cells_excluded_cv_undefined": 3
+    },
+    "verdict": "DISCONFIRMED",
+    "verdict_rationale": "criterion1 (filler>elaboration CV, cluster-bootstrap CI on pooled paired diff excludes 0 and is positive): False. criterion1 reverse-direction cells flagged at Holm-corrected p<0.05: False. criterion2 (entropy mediates length->CV, pooled Baron-Kenny bootstrap verdict): UNAVAILABLE. length-matched-prompts precondition (filler/elaboration within 15% tokens per tier): True.",
+    "metric1_paired_cv_comparison": {
+      "per_cell": [
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "long",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 0,
+            "n_positive": 0,
+            "fraction_positive": null,
+            "ci_lo": null,
+            "ci_hi": null
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "medium",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 0,
+            "n_positive": 0,
+            "fraction_positive": null,
+            "ci_lo": null,
+            "ci_hi": null
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "short",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 0,
+            "n_positive": 0,
+            "fraction_positive": null,
+            "ci_lo": null,
+            "ci_hi": null
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "long",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 0,
+            "n_positive": 0,
+            "fraction_positive": null,
+            "ci_lo": null,
+            "ci_hi": null
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "medium",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.7076372438881129,
+            "ci_lo": -0.7076372438881129,
+            "ci_hi": -0.7076372438881129,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 1,
+            "n_positive": 0,
+            "fraction_positive": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.975,
+            "binom_p_value": 1.0
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "short",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 0,
+            "n_positive": 0,
+            "fraction_positive": null,
+            "ci_lo": null,
+            "ci_hi": null
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "length_tier": "long",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0,
+            "p_value_holm": 1.0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 1
+          },
+          "sign_test": {
+            "n_pairs": 0,
+            "n_positive": 0,
+            "fraction_positive": null,
+            "ci_lo": null,
+            "ci_hi": null
+          },
+          "meets_criterion1_uncorrected": false,
+          "meets_criterion1_corrected": false,
+          "reverse_direction_flag": false
+        }
+      ],
+      "pooled_per_model": [
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "n_pairs": 9,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 9
+          }
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "n_pairs": 9,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 0.25,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 3
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.23587908129603763,
+            "ci_lo": -0.47175816259207526,
+            "ci_hi": 0.0,
+            "n": 9
+          }
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "n_pairs": 3,
+          "wilcoxon": {
+            "statistic": null,
+            "p_value": 1.0,
+            "rank_biserial_r": 0.0,
+            "n_nonzero": 0
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "n": 3
+          }
+        }
+      ],
+      "pooled_overall": {
+        "n_cluster_seed_problems": 1,
+        "n_rows_pooled": 21,
+        "wilcoxon_row_level": {
+          "statistic": 0.0,
+          "p_value": 0.0832645166635504,
+          "rank_biserial_r": -1.0,
+          "n_nonzero": 3
+        },
+        "cluster_bootstrap_mean_diff_ci": {
+          "mean": -0.10109103484115899,
+          "ci_lo": -0.10109103484115899,
+          "ci_hi": -0.10109103484115899,
+          "n": 1
+        },
+        "note": "cluster_bootstrap resamples seed_problem_id clusters (mean CV-diff per seed_problem) to respect non-independence across length_tier/model repeats of the same seed problem"
+      }
+    },
+    "metric2_entropy_precondition": {
+      "per_cell": [
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "long",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.1415981906762669,
+            "ci_lo": -0.1415981906762669,
+            "ci_hi": -0.1415981906762669,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "medium",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.22745985761941667,
+            "ci_lo": -0.22745985761941667,
+            "ci_hi": -0.22745985761941667,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "short",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.11972071883172974,
+            "ci_lo": -0.11972071883172974,
+            "ci_hi": -0.11972071883172974,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "long",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.10207419723143218,
+            "ci_lo": -0.10207419723143218,
+            "ci_hi": -0.10207419723143218,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "medium",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.10535680502253075,
+            "ci_lo": -0.10535680502253075,
+            "ci_hi": -0.10535680502253075,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "short",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.12521272681216106,
+            "ci_lo": -0.12521272681216106,
+            "ci_hi": -0.12521272681216106,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "length_tier": "long",
+          "n_pairs": 1,
+          "wilcoxon": {
+            "statistic": 0.0,
+            "p_value": 1.0,
+            "rank_biserial_r": -1.0,
+            "n_nonzero": 1
+          },
+          "bootstrap_mean_diff_ci": {
+            "mean": -0.39464992649504005,
+            "ci_lo": -0.39464992649504005,
+            "ci_hi": -0.39464992649504005,
+            "n": 1
+          },
+          "entropy_higher_for_filler": false
+        }
+      ]
+    },
+    "metric3_bootstrap_mediation": {
+      "pooled": null,
+      "per_model": []
+    },
+    "metric4_confound_robustness_checks": {
+      "token_count_by_tier_and_type": [
+        {
+          "length_tier": "bare",
+          "content_type": "baseline",
+          "mean": 57.0,
+          "std": 0.0,
+          "count": 2
+        },
+        {
+          "length_tier": "long",
+          "content_type": "irrelevant_filler",
+          "mean": 714.0,
+          "std": 0.0,
+          "count": 3
+        },
+        {
+          "length_tier": "long",
+          "content_type": "relevant_elaboration",
+          "mean": 703.0,
+          "std": 0.0,
+          "count": 3
+        },
+        {
+          "length_tier": "medium",
+          "content_type": "irrelevant_filler",
+          "mean": 307.0,
+          "std": 0.0,
+          "count": 3
+        },
+        {
+          "length_tier": "medium",
+          "content_type": "relevant_elaboration",
+          "mean": 315.0,
+          "std": 0.0,
+          "count": 2
+        },
+        {
+          "length_tier": "short",
+          "content_type": "irrelevant_filler",
+          "mean": 140.0,
+          "std": 0.0,
+          "count": 3
+        },
+        {
+          "length_tier": "short",
+          "content_type": "relevant_elaboration",
+          "mean": 126.0,
+          "std": 0.0,
+          "count": 2
+        }
+      ],
+      "length_match_check": [
+        {
+          "length_tier": "long",
+          "filler_mean_tokens": 714.0,
+          "elaboration_mean_tokens": 703.0,
+          "relative_diff": 0.015647226173541962,
+          "length_matched_within_15pct": true
+        },
+        {
+          "length_tier": "medium",
+          "filler_mean_tokens": 307.0,
+          "elaboration_mean_tokens": 315.0,
+          "relative_diff": 0.025396825396825397,
+          "length_matched_within_15pct": true
+        },
+        {
+          "length_tier": "short",
+          "filler_mean_tokens": 140.0,
+          "elaboration_mean_tokens": 126.0,
+          "relative_diff": 0.1111111111111111,
+          "length_matched_within_15pct": true
+        }
+      ],
+      "length_match_violated": false,
+      "refusal_rate_by_cell": [
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "bare",
+          "content_type": "baseline",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "long",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "long",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "medium",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "medium",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "short",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "length_tier": "short",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "bare",
+          "content_type": "baseline",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "long",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "long",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "medium",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "medium",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "short",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "length_tier": "short",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "length_tier": "long",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "length_tier": "long",
+          "content_type": "relevant_elaboration",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "length_tier": "medium",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "length_tier": "short",
+          "content_type": "irrelevant_filler",
+          "refusal_rate": null
+        }
+      ],
+      "refusal_rate_imbalance": {
+        "filler_mean_refusal": null,
+        "elaboration_mean_refusal": null,
+        "ratio_filler_over_elaboration": null,
+        "imbalance_flag_gt_2x": false
+      },
+      "model_comparison_scope": [
+        {
+          "model_id": "openai/gpt-4.1-mini",
+          "n_seed_problems": 1,
+          "n_rows": 7
+        },
+        {
+          "model_id": "openai/gpt-4.1-nano",
+          "n_seed_problems": 1,
+          "n_rows": 7
+        },
+        {
+          "model_id": "openai/gpt-4o-mini",
+          "n_seed_problems": 1,
+          "n_rows": 4
+        }
+      ],
+      "entropy_proxy_correlation": {
+        "status": "SCOPE_LIMITATION_SINGLE_ENTROPY_TYPE",
+        "has_attention_entropy": false,
+        "has_logprob_entropy": true
+      }
+    }
+  },
+  "metrics_agg": {
+    "upstream_data_available": 1.0,
+    "n_prompt_cells_evaluated": 18.0,
+    "input_contract_satisfied": 1.0,
+    "n_seed_problems": 1.0,
+    "n_models": 3.0,
+    "n_cells_excluded_cv_undefined": 3.0,
+    "criterion1_pooled_mean_cv_diff": -0.10109103484115899,
+    "criterion1_pooled_ci_lo": -0.10109103484115899,
+    "criterion1_pooled_ci_hi": -0.10109103484115899,
+    "length_match_violated": 0.0
+  },
+  "datasets": [
+    {
+      "dataset": "gen_art_experiment_1_output",
+      "examples": [
+        {
+          "input": "Per-prompt-cell aggregate for seed_problem_id=seed_000, model_id=openai/gpt-4.1-mini, content_type=baseline, length_tier=bare: answer_cv, entropy_mean, sample validity.",
+          "output": "answer_cv=0, entropy_mean=0.301456, n_valid_samples=2, refusal_rate=nan",
+          "metadata_model_id": "openai/gpt-4.1-mini",
+          "metadata_seed_problem_id": "seed_000",
+          "metadata_content_type": "baseline",
+          "metadata_length_tier": "bare",
+          "predict_answer_cv": "0",
+          "eval_answer_cv": 0.0,
+          "eval_entropy_mean": 0.30145579098693825,
+          "eval_n_valid_samples": 2.0,
+          "eval_refusal_rate": 0.0
+        },
+        {
+          "input": "Per-prompt-cell aggregate for seed_problem_id=seed_000, model_id=openai/gpt-4.1-nano, content_type=baseline, length_tier=bare: answer_cv, entropy_mean, sample validity.",
+          "output": "answer_cv=0, entropy_mean=0.36948, n_valid_samples=2, refusal_rate=nan",
+          "metadata_model_id": "openai/gpt-4.1-nano",
+          "metadata_seed_problem_id": "seed_000",
+          "metadata_content_type": "baseline",
+          "metadata_length_tier": "bare",
+          "predict_answer_cv": "0",
+          "eval_answer_cv": 0.0,
+          "eval_entropy_mean": 0.36948037069398865,
+          "eval_n_valid_samples": 2.0,
+          "eval_refusal_rate": 0.0
+        },
+        {
+          "input": "Per-prompt-cell aggregate for seed_problem_id=seed_000, model_id=openai/gpt-4.1-mini, content_type=irrelevant_filler, length_tier=long: answer_cv, entropy_mean, sample validity.",
+          "output": "answer_cv=0, entropy_mean=0.265982, n_valid_samples=2, refusal_rate=nan",
+          "metadata_model_id": "openai/gpt-4.1-mini",
+          "metadata_seed_problem_id": "seed_000",
+          "metadata_content_type": "irrelevant_filler",
+          "metadata_length_tier": "long",
+          "predict_answer_cv": "0",
+          "eval_answer_cv": 0.0,
+          "eval_entropy_mean": 0.26598239472644103,
+          "eval_n_valid_samples": 2.0,
+          "eval_refusal_rate": 0.0
+        }
+      ]
+    }
+  ]
+}

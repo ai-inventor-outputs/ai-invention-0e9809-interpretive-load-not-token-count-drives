@@ -1,0 +1,8 @@
+[project]
+name = "gen-art-dataset-1"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "tiktoken==0.14.0",
+    "loguru==0.7.3",
+]
